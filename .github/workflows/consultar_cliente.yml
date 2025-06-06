@@ -1,0 +1,14 @@
+name: Consultar cliente
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  notificar-consulta:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificación de consulta
+        run: echo "🔎 Se ha hecho una consulta de cliente. Colaboradores atentos."
+
+        

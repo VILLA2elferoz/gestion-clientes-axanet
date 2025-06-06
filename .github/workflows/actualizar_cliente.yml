@@ -1,0 +1,17 @@
+name: Actualizar cliente
+
+on:
+  push:
+    paths:
+      - 'src/**'
+    branches:
+      - main
+
+jobs:
+  notificar-actualizacion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificación de actualización
+        run: echo "🔄 Un cliente recurrente ha sido actualizado. ¡Vamos bien!"
+
+        

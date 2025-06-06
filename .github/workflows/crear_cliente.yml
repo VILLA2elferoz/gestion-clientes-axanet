@@ -1,0 +1,15 @@
+name: Crear cliente
+
+on:
+  push:
+    paths:
+      - 'src/**'
+    branches:
+      - main
+
+jobs:
+  notificar-creacion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificación de creación
+        run: echo "🚀 Se ha creado un nuevo cliente. Revisen el cambio, equipo."
