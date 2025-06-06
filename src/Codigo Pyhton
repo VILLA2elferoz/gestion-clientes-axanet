@@ -83,7 +83,7 @@ def menu():
             crear_clientes(nombre, desc)
         elif opcion == "2":
             nombre = input("Nombre del cliente: ")
-            consultar_clientes(nombre, desc)
+            consultar_clientes(nombre)
         elif opcion == "3":
             nombre = input("Nombre del cliente: ")
             nueva_desc = input("Nueva descripción del servicio: ")
