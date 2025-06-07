@@ -1,0 +1,15 @@
+name: Modificar Cliente
+
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: 'ID del cliente modificado'
+        required: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificación modificación cliente
+        run: echo "[CLIENTE MODIFICADO] ID: ${{ github.event.inputs.id }}. Notificando a DevTeam, ITTeam, CustServTeam."
