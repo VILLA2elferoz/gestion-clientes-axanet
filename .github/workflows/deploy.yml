@@ -1,1 +1,29 @@
+name: Simulación de Despliegue
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clonar el repositorio
+      uses: actions/checkout@v3
+
+    - name: Instalar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Mensaje de simulación
+      run: echo "🚀 Simulando despliegue de la aplicación Axanet..."
+
+    - name: Esperando para simular despliegue
+      run: sleep 2
+
+    - name: Éxito del despliegue
+      run: echo "✅ Aplicación 'Axanet' desplegada (simulación) con éxito"
 
