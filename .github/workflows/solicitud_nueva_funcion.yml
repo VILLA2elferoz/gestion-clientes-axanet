@@ -1,0 +1,19 @@
+name: Solicitud Nueva Función
+
+on:
+  workflow_dispatch:
+    inputs:
+      titulo:
+        description: 'Título de la nueva función'
+        required: true
+      descripcion:
+        description: 'Descripción de la nueva función'
+        required: true
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notificación nueva función
+        run: |
+          echo "[SOLICITUD DE NUEVA FUNCIÓN] Título: '${{ github.event.inputs.titulo }}'. Descripción: '${{ github.event.inputs.descripcion }}'. Pasando a comité de priorización (DevLead, ITOpsLead, CustServLead). Notificando a todos."
